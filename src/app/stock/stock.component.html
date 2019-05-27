@@ -1,0 +1,15 @@
+<div class="col-3 text-center mb-4">
+  <div class="card" style="width: 18rem;">
+    <img class="card-img-top" [src]="stock.item.img" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title text-center">{{ stock.item.name }}</h5>
+      <p class="card-text">{{ stock.item.description }}</p>
+      <small *ngFor="let category of categories"> #{{ category.name }}</small>
+      <hr>
+      <p>Prix: {{ stock.item.price }} gold(s)</p>
+      <p>Quantité restante: {{ stock.stock }}</p>
+      <hr>
+      <a href="#" class="btn btn-light">Acheter</a>
+    </div>
+  </div>
+</div>

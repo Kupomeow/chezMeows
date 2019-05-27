@@ -1,0 +1,52 @@
+<div class="row">
+  <div class="col-12">
+    <h1 class="text-center mt-5 mb-5">Ajout d'un article</h1>
+  </div>
+</div>
+
+<div class="row justify-content-center">
+  <div class="col-6">
+    <form (submit)="saveNewItem()">
+      <div class="form-group">
+        <label for="name">Nom: </label>
+        <input type="text" class="form-control" id="name" [(ngModel)]="nameForm" name="nameStock"
+          aria-describedby="emailHelp" placeholder="Potion de vie, ...">
+      </div>
+      <div class="form-group">
+        <label for="description">Description: </label>
+        <textarea class="form-control" id="description" [(ngModel)]="descriptionForm" name="descriptionStock"
+          rows="3"></textarea>
+      </div>
+      <div class="form-group">
+          <label for="name">Image: </label>
+          <input type="text" class="form-control" id="name" [(ngModel)]="imgForm" name="imgStock"
+            aria-describedby="emailHelp" placeholder="http://...">
+        </div>
+      <div class="form-group">
+        <div class="row">
+          <div class="col-6">
+            <label for="price">Catégorie: </label>
+            <select id="category" [(ngModel)]="categoryForm" name="categoryStock" class="form-control">
+              <option *ngFor="let category of categories" [ngValue]="category">{{ category.name }}</option>
+            </select>
+          </div>
+          <div class="col-3">
+            <label for="price">Prix: </label>
+            <input type="number" class="form-control" id="price" [(ngModel)]="priceForm" name="priceStock">
+          </div>
+          <div class="col-3">
+
+            <label for="price">Quantité: </label>
+            <input type="number" class="form-control" id="price" [(ngModel)]="quantityForm" name="quantityStock">
+          </div>
+        </div>
+
+      </div>
+      <div class="text-center">
+        <button type="submit" class="btn btn-light mt-4">AJOUTER</button>
+      </div>
+
+    </form>
+
+  </div>
+</div>

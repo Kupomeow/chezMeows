@@ -1,0 +1,15 @@
+<div class="row">
+    <div class="col-12">
+        <h1 class="text-center mb-5">Chez Meows !</h1>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-12 text-center mb-5">
+        <h2>Voici le matériels disponible dans notre boutique :</h2>
+    </div>
+</div>
+
+<div class="row">
+    <app-stock *ngFor="let stock of stocks" [stock]="stock" [categories]="stock.item.categories"></app-stock>
+</div>
